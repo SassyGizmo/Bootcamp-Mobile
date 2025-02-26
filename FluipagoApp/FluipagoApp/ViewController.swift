@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var userTextField: UITextField!
@@ -14,6 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var changePasswordButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
+    
+    @IBOutlet weak var userTypedCheck: UILabel!
+    @IBOutlet weak var passwordTypedCheck: UILabel!
     
     private let primaryColor = UIColor(red: 164/255, green: 180/255, blue: 101/255, alpha: 1)
     private let secondaryColor = UIColor(red: 255/255, green: 207/255, blue: 80/255, alpha: 1)
@@ -24,14 +28,35 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userTextField.layer.borderColor = primaryColor.cgColor
-        userTextField.layer.borderWidth = 1
-        userTextField.layer.cornerRadius = 3
-        
-        passwordTextField.layer.borderColor = primaryColor.cgColor
-        passwordTextField.layer.borderWidth = 1
-        passwordTextField.layer.cornerRadius = 3
+    }
     
+    
+    func autenticarUsuario(usuario: String, password: String) {
+        if usuario != "Junior" {
+            userTypedCheck.text = "Usuario incorrecto"
+        } else {
+            userTypedCheck.text = ""
+        }
+        
+        if password != "1234" {
+            passwordTypedCheck.text = "Contrasena incorrecta"
+        }
+        
+        if usuario == "Junior" && password == "1234" {
+
+            let gameScreen = self.storyboard?.instantiateViewController(withIdentifier: "gameId") as? GameViewController
+            guard gameScreen != nil else { return }
+            navigationController?.show(gameScreen!, sender: nil)
+
+        }
+    }
+    
+    @IBAction func loginButtonTapped(_ sender: UIButton) {
+        let usuario = userTextField.text!
+        let password = passwordTextField.text!
+        
+        autenticarUsuario(usuario: usuario, password: password)
+        
     }
 
 }
