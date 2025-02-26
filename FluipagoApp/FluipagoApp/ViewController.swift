@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         
         if usuario == "Junior" && password == "1234" {
 
-            let gameScreen = self.storyboard?.instantiateViewController(withIdentifier: "gameId") as? GameViewController
+            let gameScreen = self.storyboard?.instantiateViewController(withIdentifier: "gameID") as? GameViewController
             guard gameScreen != nil else { return }
             navigationController?.show(gameScreen!, sender: nil)
 
@@ -58,6 +58,13 @@ class ViewController: UIViewController {
         autenticarUsuario(usuario: usuario, password: password)
         
     }
+    
+    @IBAction func registerButtonTapped(_ sender: Any) {
+        let registerScreen = self.storyboard?.instantiateViewController(withIdentifier: "registerID") as? RegisterViewController
+        guard registerScreen != nil else { return }
+        navigationController?.show(registerScreen!, sender: nil)
+    }
+    
 
 }
 
