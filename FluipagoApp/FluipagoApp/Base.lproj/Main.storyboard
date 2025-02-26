@@ -209,21 +209,63 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbA-9b-LKb" userLabel="GameButtonContainer">
                                 <rect key="frame" x="0.0" y="778.66666666666663" width="440" height="143.33333333333337"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awR-k5-tUa">
-                                        <rect key="frame" x="132" y="43" width="176" height="57.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Empezar">
-                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
-                                            <color key="baseBackgroundColor" red="1" green="0.81176470590000005" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </buttonConfiguration>
-                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQX-J8-813" userLabel="Empezar Container">
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="143.33333333333334"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awR-k5-tUa">
+                                                <rect key="frame" x="22" y="43" width="176" height="57.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Empezar">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                                    <color key="baseBackgroundColor" red="1" green="0.81176470590000005" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="startButtonClick:" destination="OJQ-SU-VZe" eventType="touchUpInside" id="ljv-gJ-ftH"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.64313725489999995" green="0.70588235290000001" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="awR-k5-tUa" firstAttribute="centerX" secondItem="QQX-J8-813" secondAttribute="centerX" id="8HA-Qe-jeB"/>
+                                            <constraint firstItem="awR-k5-tUa" firstAttribute="height" secondItem="QQX-J8-813" secondAttribute="height" multiplier="0.4" id="WoS-9K-SWi"/>
+                                            <constraint firstItem="awR-k5-tUa" firstAttribute="width" secondItem="QQX-J8-813" secondAttribute="width" multiplier="0.8" id="uph-UX-Tmw"/>
+                                            <constraint firstItem="awR-k5-tUa" firstAttribute="centerY" secondItem="QQX-J8-813" secondAttribute="centerY" id="vON-OS-4iY"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8u-jJ-ZOS" userLabel="Parar Container">
+                                        <rect key="frame" x="220" y="0.0" width="220" height="143.33333333333334"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GlY-0K-Qmt" userLabel="Parar">
+                                                <rect key="frame" x="22" y="43" width="176" height="57.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Parar">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="stopButtonClick:" destination="OJQ-SU-VZe" eventType="touchUpInside" id="H4s-wj-wTO"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.64313725489999995" green="0.70588235290000001" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="GlY-0K-Qmt" firstAttribute="centerX" secondItem="c8u-jJ-ZOS" secondAttribute="centerX" id="K9G-Ct-dev"/>
+                                            <constraint firstItem="GlY-0K-Qmt" firstAttribute="centerY" secondItem="c8u-jJ-ZOS" secondAttribute="centerY" id="byh-hj-fOK"/>
+                                            <constraint firstItem="GlY-0K-Qmt" firstAttribute="width" secondItem="c8u-jJ-ZOS" secondAttribute="width" multiplier="0.8" id="cS9-3Y-i24"/>
+                                            <constraint firstItem="GlY-0K-Qmt" firstAttribute="height" secondItem="c8u-jJ-ZOS" secondAttribute="height" multiplier="0.4" id="cwn-1E-d4W"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.64313725490196072" green="0.70588235294117641" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="awR-k5-tUa" firstAttribute="width" secondItem="xbA-9b-LKb" secondAttribute="width" multiplier="0.4" id="MB9-Lo-oti"/>
-                                    <constraint firstItem="awR-k5-tUa" firstAttribute="centerY" secondItem="xbA-9b-LKb" secondAttribute="centerY" id="eWe-dp-StT"/>
-                                    <constraint firstItem="awR-k5-tUa" firstAttribute="height" secondItem="xbA-9b-LKb" secondAttribute="height" multiplier="0.4" id="fPk-cd-CEX"/>
-                                    <constraint firstItem="awR-k5-tUa" firstAttribute="centerX" secondItem="xbA-9b-LKb" secondAttribute="centerX" id="iG3-uR-ov0"/>
+                                    <constraint firstItem="c8u-jJ-ZOS" firstAttribute="height" secondItem="xbA-9b-LKb" secondAttribute="height" id="8Ju-gh-Fzs"/>
+                                    <constraint firstItem="QQX-J8-813" firstAttribute="top" secondItem="xbA-9b-LKb" secondAttribute="top" id="CQj-Yf-QqI"/>
+                                    <constraint firstItem="c8u-jJ-ZOS" firstAttribute="top" secondItem="xbA-9b-LKb" secondAttribute="top" id="ONt-Q1-4r0"/>
+                                    <constraint firstItem="QQX-J8-813" firstAttribute="height" secondItem="xbA-9b-LKb" secondAttribute="height" id="QRP-2j-Z9E"/>
+                                    <constraint firstAttribute="trailing" secondItem="c8u-jJ-ZOS" secondAttribute="trailing" id="iFp-Px-n9T"/>
+                                    <constraint firstItem="c8u-jJ-ZOS" firstAttribute="width" secondItem="xbA-9b-LKb" secondAttribute="width" multiplier="0.5" id="q7K-Jl-JZW"/>
+                                    <constraint firstItem="QQX-J8-813" firstAttribute="leading" secondItem="xbA-9b-LKb" secondAttribute="leading" id="wMT-6e-Rz8"/>
+                                    <constraint firstItem="QQX-J8-813" firstAttribute="width" secondItem="xbA-9b-LKb" secondAttribute="width" multiplier="0.5" id="xHr-dt-9bb"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6NX-ku-wiW" userLabel="GUI">
@@ -322,7 +364,11 @@
                     <connections>
                         <outlet property="clickButton" destination="41K-Ia-FRH" id="7w5-18-7OP"/>
                         <outlet property="gameField" destination="Rdr-DH-idq" id="8V1-j1-PJm"/>
+                        <outlet property="pointsLabel" destination="XXu-M0-PjO" id="YME-Nk-jZO"/>
+                        <outlet property="startButton" destination="awR-k5-tUa" id="QaF-2o-AUF"/>
+                        <outlet property="stopButton" destination="GlY-0K-Qmt" id="HAK-bH-98H"/>
                         <outlet property="timerBox" destination="Vog-0a-lk0" id="7qK-c7-IeO"/>
+                        <outlet property="timerLabel" destination="j7y-Od-H8i" id="N0M-Df-III"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UOn-SL-4VB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
