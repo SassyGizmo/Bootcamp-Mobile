@@ -342,13 +342,59 @@
                                     <constraint firstItem="Vog-0a-lk0" firstAttribute="width" secondItem="6NX-ku-wiW" secondAttribute="width" multiplier="0.3" id="xuJ-SN-TYj"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0x1-DQ-rFb" userLabel="Popup">
+                                <rect key="frame" x="110" y="377.33333333333331" width="220" height="229.33333333333331"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alerta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6P-Qq-jw6" userLabel="Alerta">
+                                        <rect key="frame" x="0.0" y="20" width="220" height="46"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <color key="textColor" systemColor="systemPinkColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGH-Pm-HU7" userLabel="Ok Popup">
+                                        <rect key="frame" x="66" y="175.00000000000006" width="88" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="OK">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                            <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="popupButtonTapped:" destination="OJQ-SU-VZe" eventType="touchUpInside" id="CAa-Px-WyE"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puntaje: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ep2-jH-cfJ" userLabel="Puntaje Popup">
+                                        <rect key="frame" x="22" y="91.666666666666686" width="176" height="46"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="x6P-Qq-jw6" firstAttribute="centerX" secondItem="0x1-DQ-rFb" secondAttribute="centerX" id="08R-7e-igP"/>
+                                    <constraint firstItem="Ep2-jH-cfJ" firstAttribute="width" secondItem="0x1-DQ-rFb" secondAttribute="width" multiplier="0.8" id="1Bq-fv-GCv"/>
+                                    <constraint firstItem="Ep2-jH-cfJ" firstAttribute="height" secondItem="0x1-DQ-rFb" secondAttribute="height" multiplier="0.2" id="M93-3b-Ugz"/>
+                                    <constraint firstItem="SGH-Pm-HU7" firstAttribute="centerX" secondItem="0x1-DQ-rFb" secondAttribute="centerX" id="MWF-Fg-Zbu"/>
+                                    <constraint firstItem="SGH-Pm-HU7" firstAttribute="width" secondItem="0x1-DQ-rFb" secondAttribute="width" multiplier="0.4" id="O6D-nw-MdS"/>
+                                    <constraint firstItem="x6P-Qq-jw6" firstAttribute="height" secondItem="0x1-DQ-rFb" secondAttribute="height" multiplier="0.2" id="Qef-I3-cr2"/>
+                                    <constraint firstItem="Ep2-jH-cfJ" firstAttribute="centerY" secondItem="0x1-DQ-rFb" secondAttribute="centerY" id="YF2-Vb-hm4"/>
+                                    <constraint firstItem="x6P-Qq-jw6" firstAttribute="width" secondItem="0x1-DQ-rFb" secondAttribute="width" id="aEZ-hu-osC"/>
+                                    <constraint firstItem="SGH-Pm-HU7" firstAttribute="height" secondItem="0x1-DQ-rFb" secondAttribute="height" multiplier="0.15" id="eMn-IF-gXA"/>
+                                    <constraint firstItem="Ep2-jH-cfJ" firstAttribute="centerX" secondItem="0x1-DQ-rFb" secondAttribute="centerX" id="fWJ-7t-kKz"/>
+                                    <constraint firstItem="x6P-Qq-jw6" firstAttribute="top" secondItem="0x1-DQ-rFb" secondAttribute="top" constant="20" id="haY-ap-BWu"/>
+                                    <constraint firstAttribute="bottom" secondItem="SGH-Pm-HU7" secondAttribute="bottom" constant="20" id="uFc-c4-oxF"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GFe-ZC-gkM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="0x1-DQ-rFb" firstAttribute="centerX" secondItem="Rdr-DH-idq" secondAttribute="centerX" id="09C-Af-axk"/>
+                            <constraint firstItem="0x1-DQ-rFb" firstAttribute="centerY" secondItem="Rdr-DH-idq" secondAttribute="centerY" id="0GC-oe-K73"/>
                             <constraint firstItem="GFe-ZC-gkM" firstAttribute="trailing" secondItem="6NX-ku-wiW" secondAttribute="trailing" id="7Yn-aW-WTS"/>
                             <constraint firstItem="xbA-9b-LKb" firstAttribute="bottom" secondItem="GFe-ZC-gkM" secondAttribute="bottom" id="EgS-ib-0rZ"/>
                             <constraint firstItem="Rdr-DH-idq" firstAttribute="top" secondItem="6NX-ku-wiW" secondAttribute="bottom" id="IKc-zA-S2Y"/>
+                            <constraint firstItem="0x1-DQ-rFb" firstAttribute="height" secondItem="Rdr-DH-idq" secondAttribute="height" multiplier="0.4" id="N2g-Bu-CV0"/>
                             <constraint firstItem="Rdr-DH-idq" firstAttribute="height" secondItem="QJ2-NF-zkL" secondAttribute="height" multiplier="0.6" id="RFy-8d-Fqg"/>
                             <constraint firstItem="Rdr-DH-idq" firstAttribute="centerY" secondItem="GFe-ZC-gkM" secondAttribute="centerY" id="WhN-Lu-fmJ"/>
                             <constraint firstItem="6NX-ku-wiW" firstAttribute="leading" secondItem="GFe-ZC-gkM" secondAttribute="leading" id="aLO-lR-HYq"/>
@@ -357,6 +403,7 @@
                             <constraint firstItem="Rdr-DH-idq" firstAttribute="width" secondItem="QJ2-NF-zkL" secondAttribute="width" id="jFJ-L7-wnE"/>
                             <constraint firstItem="6NX-ku-wiW" firstAttribute="top" secondItem="GFe-ZC-gkM" secondAttribute="top" id="jKE-nH-EmG"/>
                             <constraint firstItem="Rdr-DH-idq" firstAttribute="centerX" secondItem="GFe-ZC-gkM" secondAttribute="centerX" id="kWG-Ux-aoP"/>
+                            <constraint firstItem="0x1-DQ-rFb" firstAttribute="width" secondItem="Rdr-DH-idq" secondAttribute="width" multiplier="0.5" id="nwg-0O-1kD"/>
                             <constraint firstItem="xbA-9b-LKb" firstAttribute="top" secondItem="Rdr-DH-idq" secondAttribute="bottom" id="tNS-Yt-EHY"/>
                         </constraints>
                     </view>
@@ -365,6 +412,10 @@
                         <outlet property="clickButton" destination="41K-Ia-FRH" id="7w5-18-7OP"/>
                         <outlet property="gameField" destination="Rdr-DH-idq" id="8V1-j1-PJm"/>
                         <outlet property="pointsLabel" destination="XXu-M0-PjO" id="YME-Nk-jZO"/>
+                        <outlet property="popup" destination="0x1-DQ-rFb" id="Lwh-Pa-kyx"/>
+                        <outlet property="popupButton" destination="SGH-Pm-HU7" id="MDh-tZ-cIH"/>
+                        <outlet property="popupLabel" destination="x6P-Qq-jw6" id="hk3-aP-rD9"/>
+                        <outlet property="puntajePopup" destination="Ep2-jH-cfJ" id="t3T-Wd-bkm"/>
                         <outlet property="startButton" destination="awR-k5-tUa" id="QaF-2o-AUF"/>
                         <outlet property="stopButton" destination="GlY-0K-Qmt" id="HAK-bH-98H"/>
                         <outlet property="timerBox" destination="Vog-0a-lk0" id="7qK-c7-IeO"/>
