@@ -10,43 +10,58 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // Variables del formulario login
     @IBOutlet weak var userTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var changePasswordButton: UIButton!
-    @IBOutlet weak var registerButton: UIButton!
     
+    @IBOutlet weak var hiUserLabel: UILabel!
     @IBOutlet weak var userTypedCheck: UILabel!
     @IBOutlet weak var passwordTypedCheck: UILabel!
     
-    private let primaryColor = UIColor(red: 164/255, green: 180/255, blue: 101/255, alpha: 1)
-    private let secondaryColor = UIColor(red: 255/255, green: 207/255, blue: 80/255, alpha: 1)
-    private let tertiaryColor = UIColor(red: 254/255, green: 250/255, blue: 224/255, alpha: 1)
-    
-    
-    
+    // -----------------------------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        hiUserLabel.isHidden = true
     }
-    
+    // -----------------------------------------------------
     
     func autenticarUsuario(usuario: String, password: String) {
-        if usuario != "Junior" {
-            userTypedCheck.text = "Usuario incorrecto"
+        
+        // Varible checklist para verificar que ambos campos esten correctos
+        var checklist = 0
+        
+        if userTextField.text! == UserDefaults.standard.string(forKey: "\(userTextField.text!)") {
+            checklist += 1
         } else {
-            userTypedCheck.text = ""
+            userTypedCheck.text = "Usuario incorrecto"
         }
         
-        if password != "1234" {
+        if passwordTextField.text! == UserDefaults.standard.string(forKey: "\(userTextField.text! + passwordTextField.text!)") {
+            checklist += 1
+        } else {
             passwordTypedCheck.text = "Contrasena incorrecta"
         }
         
-        if usuario == "Junior" && password == "1234" {
-
+        
+        if checklist == 2 {
+            
+            checklist = 0
+            
+            // Ir a la siguiente pantalla
             let gameScreen = self.storyboard?.instantiateViewController(withIdentifier: "gameID") as? GameViewController
             guard gameScreen != nil else { return }
             navigationController?.show(gameScreen!, sender: nil)
+            
+            // Configuracion para saludar al ultimo usuario ingresado
+            UserDefaults.standard.set(userTextField.text, forKey: "LastUser")
+            hiUserLabel.text = "¡Hola \(String(describing: UserDefaults.standard.string(forKey: "LastUser")!))!"
+            hiUserLabel.isHidden = false
+            
+            // Reseteo de los cambos de usuario y contrasena incorrectos
+            userTypedCheck.text = ""
+            passwordTypedCheck.text = ""
 
         }
     }
@@ -54,17 +69,7 @@ class ViewController: UIViewController {
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         let usuario = userTextField.text!
         let password = passwordTextField.text!
-        
         autenticarUsuario(usuario: usuario, password: password)
-        
     }
-    
-    @IBAction func registerButtonTapped(_ sender: Any) {
-        let registerScreen = self.storyboard?.instantiateViewController(withIdentifier: "registerID") as? RegisterViewController
-        guard registerScreen != nil else { return }
-        navigationController?.show(registerScreen!, sender: nil)
-    }
-    
-
 }
 
