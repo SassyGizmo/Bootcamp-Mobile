@@ -42,10 +42,10 @@ class RegisterViewController: UIViewController {
                 let email = emailTextField.text, !email.isEmpty,
                 let password = passwordTextField.text, !password.isEmpty,
                 let repeatPassword = repeatPasswordField.text, !repeatPassword.isEmpty else {
-                shakeTextField(userTextField)
-                shakeTextField(emailTextField)
-                shakeTextField(passwordTextField)
-                shakeTextField(repeatPasswordField)
+            shakeTextField(userTextField)
+            shakeTextField(emailTextField)
+            shakeTextField(passwordTextField)
+            shakeTextField(repeatPasswordField)
             return
         }
         
@@ -66,7 +66,7 @@ class RegisterViewController: UIViewController {
         print("Usuario registrado exitosamente.")
         
         
-
+        
     }
     
 }

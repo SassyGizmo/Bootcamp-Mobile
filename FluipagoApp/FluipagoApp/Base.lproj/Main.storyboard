@@ -340,6 +340,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63r-BJ-cPG" userLabel="False Click">
                                         <rect key="frame" x="187" y="253.66666666666663" width="66" height="66"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" secondItem="63r-BJ-cPG" secondAttribute="height" multiplier="1:1" id="4Pi-Km-Ueh"/>
                                             <constraint firstAttribute="width" secondItem="63r-BJ-cPG" secondAttribute="height" multiplier="1:1" id="xj6-ad-fqk"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
@@ -360,7 +361,6 @@
                                 <color key="backgroundColor" red="0.99607843137254903" green="0.98039215686274506" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="63r-BJ-cPG" firstAttribute="centerY" secondItem="Rdr-DH-idq" secondAttribute="centerY" id="42r-Yj-pVZ"/>
-                                    <constraint firstItem="63r-BJ-cPG" firstAttribute="width" secondItem="63r-BJ-cPG" secondAttribute="height" multiplier="1:1" id="4Pi-Km-Ueh"/>
                                     <constraint firstItem="63r-BJ-cPG" firstAttribute="width" secondItem="41K-Ia-FRH" secondAttribute="width" id="IAl-eF-S1j"/>
                                     <constraint firstItem="Zg6-Rg-wb7" firstAttribute="width" secondItem="41K-Ia-FRH" secondAttribute="width" id="L9B-M6-71J"/>
                                     <constraint firstItem="Zg6-Rg-wb7" firstAttribute="centerY" secondItem="Rdr-DH-idq" secondAttribute="centerY" id="LZa-Eq-Ctg"/>
@@ -594,7 +594,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UOn-SL-4VB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1616" y="2"/>
+            <point key="canvasLocation" x="2096" y="44"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="riE-DX-3KN">
