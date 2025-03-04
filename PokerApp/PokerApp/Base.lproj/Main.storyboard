@@ -50,7 +50,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hlq-Jz-PSy" userLabel="GameField">
                                 <rect key="frame" x="0.0" y="247.66666666666663" width="393" height="426"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice-six-faces-one" translatesAutoresizingMaskIntoConstraints="NO" id="jyV-Bi-ZAr" userLabel="MainDice">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice-six-faces-1" translatesAutoresizingMaskIntoConstraints="NO" id="jyV-Bi-ZAr" userLabel="MainDice">
                                         <rect key="frame" x="118" y="134.33333333333334" width="157" height="157.00000000000003"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="jyV-Bi-ZAr" secondAttribute="height" multiplier="1:1" id="MQb-RX-sH5"/>
@@ -105,7 +105,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Os-pf-STy" userLabel="DiceBox5">
                                                 <rect key="frame" x="283" y="0.0" width="70.666666666666686" height="91"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice-six-faces-six" translatesAutoresizingMaskIntoConstraints="NO" id="xVo-FX-ADU">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice-six-faces-empty" translatesAutoresizingMaskIntoConstraints="NO" id="xVo-FX-ADU">
                                                         <rect key="frame" x="6.9999999999999964" y="16.999999999999982" width="56.666666666666657" height="56.666666666666657"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="xVo-FX-ADU" secondAttribute="height" multiplier="1:1" id="mMR-VY-fki"/>
@@ -122,7 +122,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q4d-AB-vki" userLabel="DiceBox4">
                                                 <rect key="frame" x="212.33333333333334" y="0.0" width="70.666666666666657" height="91"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice-six-faces-six" translatesAutoresizingMaskIntoConstraints="NO" id="O4t-Bv-ATw">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice-six-faces-empty" translatesAutoresizingMaskIntoConstraints="NO" id="O4t-Bv-ATw">
                                                         <rect key="frame" x="6.9999999999999964" y="16.999999999999982" width="56.666666666666657" height="56.666666666666657"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="O4t-Bv-ATw" secondAttribute="height" multiplier="1:1" id="OKB-0Y-60f"/>
@@ -139,7 +139,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mOW-OD-eKd" userLabel="DiceBox3">
                                                 <rect key="frame" x="141.33333333333334" y="0.0" width="71" height="91"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice-six-faces-six" translatesAutoresizingMaskIntoConstraints="NO" id="NcD-Ww-SXa">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice-six-faces-empty" translatesAutoresizingMaskIntoConstraints="NO" id="NcD-Ww-SXa">
                                                         <rect key="frame" x="7.3333333333333464" y="16.999999999999982" width="56.333333333333343" height="56.666666666666657"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="NcD-Ww-SXa" secondAttribute="height" multiplier="1:1" id="pg2-Tj-QBq"/>
@@ -156,7 +156,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3N-2f-Tz1" userLabel="DiceBox2">
                                                 <rect key="frame" x="70.666666666666657" y="0.0" width="70.666666666666657" height="91"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice-six-faces-six" translatesAutoresizingMaskIntoConstraints="NO" id="o3o-CM-aJ1">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice-six-faces-empty" translatesAutoresizingMaskIntoConstraints="NO" id="o3o-CM-aJ1">
                                                         <rect key="frame" x="6.9999999999999964" y="16.999999999999982" width="56.666666666666657" height="56.666666666666657"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="o3o-CM-aJ1" secondAttribute="height" multiplier="1:1" id="FAF-gR-qIz"/>
@@ -173,7 +173,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6j-I5-0Df" userLabel="DiceBox1">
                                                 <rect key="frame" x="0.0" y="0.0" width="70.666666666666671" height="91"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice-six-faces-six" translatesAutoresizingMaskIntoConstraints="NO" id="d1m-hl-5iy" userLabel="Dice">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice-six-faces-empty" translatesAutoresizingMaskIntoConstraints="NO" id="d1m-hl-5iy" userLabel="Dice">
                                                         <rect key="frame" x="6.9999999999999964" y="16.999999999999982" width="56.666666666666657" height="56.666666666666657"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="d1m-hl-5iy" secondAttribute="height" multiplier="1:1" id="a1C-fw-FhC"/>
@@ -227,6 +227,10 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUq-f7-Qcf" userLabel="InButtonContainer">
                                         <rect key="frame" x="19.666666666666657" y="19.666666666666742" width="353.66666666666674" height="91"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cuw-FQ-0Df" userLabel="ButtonBack">
+                                                <rect key="frame" x="52.999999999999986" y="22.666666666666625" width="247.66666666666663" height="45.666666666666657"/>
+                                                <color key="backgroundColor" red="0.92549019610000005" green="0.86274509799999999" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e58-fo-SdX">
                                                 <rect key="frame" x="52.999999999999986" y="22.666666666666625" width="247.66666666666663" height="45.666666666666657"/>
                                                 <state key="normal" title="Button"/>
@@ -242,10 +246,14 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.63921568627450975" green="0.11372549019607843" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="cuw-FQ-0Df" firstAttribute="width" secondItem="pUq-f7-Qcf" secondAttribute="width" multiplier="0.7" id="5YI-HZ-JE4"/>
                                             <constraint firstItem="e58-fo-SdX" firstAttribute="centerY" secondItem="pUq-f7-Qcf" secondAttribute="centerY" id="I8o-XI-6Mu"/>
                                             <constraint firstItem="e58-fo-SdX" firstAttribute="centerX" secondItem="pUq-f7-Qcf" secondAttribute="centerX" id="IGV-Rt-50n"/>
                                             <constraint firstItem="e58-fo-SdX" firstAttribute="width" secondItem="pUq-f7-Qcf" secondAttribute="width" multiplier="0.7" id="JrA-Nq-7QB"/>
+                                            <constraint firstItem="cuw-FQ-0Df" firstAttribute="centerX" secondItem="pUq-f7-Qcf" secondAttribute="centerX" id="Lpb-Ef-6dA"/>
+                                            <constraint firstItem="cuw-FQ-0Df" firstAttribute="height" secondItem="pUq-f7-Qcf" secondAttribute="height" multiplier="0.5" id="SAM-CT-Wlq"/>
                                             <constraint firstItem="e58-fo-SdX" firstAttribute="height" secondItem="pUq-f7-Qcf" secondAttribute="height" multiplier="0.5" id="ZVR-0y-CmH"/>
+                                            <constraint firstItem="cuw-FQ-0Df" firstAttribute="centerY" secondItem="pUq-f7-Qcf" secondAttribute="centerY" id="dB1-0D-Tet"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -286,6 +294,7 @@
                     <navigationItem key="navigationItem" id="ptQ-x1-zQ4"/>
                     <connections>
                         <outlet property="bottomBorder" destination="qUW-ZU-4Gj" id="0qf-cn-uh8"/>
+                        <outlet property="buttonBack" destination="cuw-FQ-0Df" id="X58-fo-z8n"/>
                         <outlet property="buttonContainer" destination="pUq-f7-Qcf" id="vMG-vM-48e"/>
                         <outlet property="diceBoxLeft" destination="a6j-I5-0Df" id="rlN-7m-2J0"/>
                         <outlet property="diceBoxRight" destination="3Os-pf-STy" id="fhS-49-4u9"/>
@@ -297,6 +306,7 @@
                         <outlet property="diceTwo" destination="o3o-CM-aJ1" id="WSz-77-KP5"/>
                         <outlet property="gameField" destination="Hlq-Jz-PSy" id="tqU-Q9-rHS"/>
                         <outlet property="mainDice" destination="jyV-Bi-ZAr" id="KzL-0x-pkZ"/>
+                        <outlet property="startButton" destination="e58-fo-SdX" id="csD-db-Lyi"/>
                         <outlet property="topBorder" destination="bE0-T7-hKO" id="lsK-fB-CBP"/>
                     </connections>
                 </viewController>
@@ -324,8 +334,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="dice-six-faces-one" width="512" height="512"/>
-        <image name="dice-six-faces-six" width="512" height="512"/>
+        <image name="dice-six-faces-1" width="512" height="512"/>
+        <image name="dice-six-faces-empty" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
