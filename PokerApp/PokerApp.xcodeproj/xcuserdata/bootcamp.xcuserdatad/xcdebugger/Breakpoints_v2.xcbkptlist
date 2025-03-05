@@ -14,8 +14,8 @@
             filePath = "PokerApp/PokerViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
             landmarkName = "diceFiveRoll()"
             landmarkType = "7">
          </BreakpointContent>

@@ -25,6 +25,11 @@ class PokerViewController: UIViewController {
     @IBOutlet weak var buttonBack: UIView!
     @IBOutlet weak var mainDice: UIImageView!
     
+    let tinyTime: Double = 0.25
+    let shortTime: Double = 0.1
+    let longTime: Double = 2
+    let largeTime: Double = 3
+    
     var diceArray: Array<Int> = [0, 0, 0, 0, 0]
     var dictionaryCounter: Dictionary<Int, Int> = [1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0]
     
@@ -63,17 +68,17 @@ class PokerViewController: UIViewController {
     func mainDiceRoll(index: Int) {
         mainDice.isHidden = false
         mainDice.image = UIImage(named: "dice-six-faces-1")
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + tinyTime) {
             self.mainDice.image = UIImage(named: "dice-six-faces-4")
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + self.tinyTime) {
                 self.mainDice.image = UIImage(named: "dice-six-faces-6")
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + self.tinyTime) {
                     self.mainDice.image = UIImage(named: "dice-six-faces-2")
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + self.tinyTime) {
                         self.mainDice.image = UIImage(named: "dice-six-faces-3")
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + self.tinyTime) {
                             self.mainDice.image = UIImage(named: "dice-six-faces-5")
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + self.tinyTime) {
                                 self.mainDice.image = UIImage(named: "dice-six-faces-\(index)")
                             }
                         }
@@ -91,7 +96,7 @@ class PokerViewController: UIViewController {
         // Iniciar el temporizador para cambiar el color cada 0.5 segundos durante 3 segundos
         timer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(updateRainbow), userInfo: nil, repeats: true)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { self.timer?.invalidate() }
+        DispatchQueue.main.asyncAfter(deadline: .now() + longTime) { self.timer?.invalidate() }
     }
     
     
@@ -109,21 +114,21 @@ class PokerViewController: UIViewController {
         let originalPositionDiceOne = diceOne.center
         let targetCenter = gameField.superview?.convert(gameField.center, to: diceOne.superview)
         
-        UIView.animate(withDuration: 0.1, animations: {
+        UIView.animate(withDuration: shortTime, animations: {
             if let center = targetCenter {
                 self.diceOne.center = center
             }
         })
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + shortTime) {
             self.diceOne.isHidden = true
             self.diceArray[0] = Int.random(in: 1...6)
             self.mainDiceRoll(index: self.diceArray[0])
             self.diceOne.image = UIImage(named: "dice-six-faces-\(self.diceArray[0])")
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            UIView.animate(withDuration: 0.1, animations: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + longTime) {
+            UIView.animate(withDuration: self.shortTime, animations: {
                 self.diceOne.isHidden = false
                 self.mainDice.isHidden = true
                 self.diceOne.center = originalPositionDiceOne
@@ -137,21 +142,21 @@ class PokerViewController: UIViewController {
         let originalPositionDiceTwo = diceTwo.center
         let targetCenter = gameField.superview?.convert(gameField.center, to: diceTwo.superview)
         
-        UIView.animate(withDuration: 0.1, animations: {
+        UIView.animate(withDuration: shortTime, animations: {
             if let center = targetCenter {
                 self.diceTwo.center = center
             }
         })
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + shortTime) {
             self.diceTwo.isHidden = true
             self.diceArray[1] = Int.random(in: 1...6)
             self.mainDiceRoll(index: self.diceArray[1])
             self.diceTwo.image = UIImage(named: "dice-six-faces-\(self.diceArray[1])")
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            UIView.animate(withDuration: 0.1, animations: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + longTime) {
+            UIView.animate(withDuration: self.shortTime, animations: {
                 self.diceTwo.isHidden = false
                 self.mainDice.isHidden = true
                 self.diceTwo.center = originalPositionDiceTwo
@@ -165,21 +170,21 @@ class PokerViewController: UIViewController {
         let originalPositionDiceThree = diceThree.center
         let targetCenter = gameField.superview?.convert(gameField.center, to: diceThree.superview)
         
-        UIView.animate(withDuration: 0.1, animations: {
+        UIView.animate(withDuration: shortTime, animations: {
             if let center = targetCenter {
                 self.diceThree.center = center
             }
         })
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + shortTime) {
             self.diceThree.isHidden = true
             self.diceArray[2] = Int.random(in: 1...6)
             self.mainDiceRoll(index: self.diceArray[2])
             self.diceThree.image = UIImage(named: "dice-six-faces-\(self.diceArray[2])")
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            UIView.animate(withDuration: 0.1, animations: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + longTime) {
+            UIView.animate(withDuration: self.shortTime, animations: {
                 self.diceThree.isHidden = false
                 self.mainDice.isHidden = true
                 self.diceThree.center = originalPositionDiceThree
@@ -193,21 +198,21 @@ class PokerViewController: UIViewController {
         let originalPositionDiceFour = diceFour.center
         let targetCenter = gameField.superview?.convert(gameField.center, to: diceFour.superview)
         
-        UIView.animate(withDuration: 0.1, animations: {
+        UIView.animate(withDuration: shortTime, animations: {
             if let center = targetCenter {
                 self.diceFour.center = center
             }
         })
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + shortTime) {
             self.diceFour.isHidden = true
             self.diceArray[3] = Int.random(in: 1...6)
             self.mainDiceRoll(index: self.diceArray[3])
             self.diceFour.image = UIImage(named: "dice-six-faces-\(self.diceArray[3])")
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            UIView.animate(withDuration: 0.1, animations: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + longTime) {
+            UIView.animate(withDuration: self.shortTime, animations: {
                 self.diceFour.isHidden = false
                 self.mainDice.isHidden = true
                 self.diceFour.center = originalPositionDiceFour
@@ -221,21 +226,21 @@ class PokerViewController: UIViewController {
         let originalPositionDiceFive = diceFive.center
         let targetCenter = gameField.superview?.convert(gameField.center, to: diceFive.superview)
         
-        UIView.animate(withDuration: 0.1, animations: {
+        UIView.animate(withDuration: shortTime, animations: {
             if let center = targetCenter {
                 self.diceFive.center = center
             }
         })
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + shortTime) {
             self.diceFive.isHidden = true
             self.diceArray[4] = Int.random(in: 1...6)
             self.mainDiceRoll(index: self.diceArray[4])
             self.diceFive.image = UIImage(named: "dice-six-faces-\(self.diceArray[4])")
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            UIView.animate(withDuration: 0.1, animations: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + longTime) {
+            UIView.animate(withDuration: self.shortTime, animations: {
                 self.diceFive.isHidden = false
                 self.mainDice.isHidden = true
                 self.diceFive.center = originalPositionDiceFive
@@ -306,8 +311,6 @@ class PokerViewController: UIViewController {
     
     
     @IBAction func start(_ sender: Any) {
-        self.diceArray = [3, 3, 1, 1, 1]
-        print(self.evaluateHand())
         diceOne.image = UIImage(named: "dice-six-faces-empty")
         diceTwo.image = UIImage(named: "dice-six-faces-empty")
         diceThree.image = UIImage(named: "dice-six-faces-empty")
@@ -319,21 +322,22 @@ class PokerViewController: UIViewController {
         diceOneRoll()
         
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + largeTime) {
             self.startRainbowEffect()
             self.diceTwoRoll()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + self.largeTime) {
                 self.startRainbowEffect()
                 self.diceThreeRoll()
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + self.largeTime) {
                     self.startRainbowEffect()
                     self.diceFourRoll()
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + self.largeTime) {
                         self.startRainbowEffect()
                         self.diceFiveRoll()
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + self.largeTime) {
                             self.startButton.isEnabled = true
-                            
+                            print(self.evaluateHand())
+                            print(self.diceArray)
                         }
                     }
                 }
