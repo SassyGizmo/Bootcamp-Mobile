@@ -255,15 +255,17 @@ class PokerViewController: UIViewController {
         if Set(diceArray).count == 1 {
             return "Generala"
         }
+        dictionaryCounter.removeAll()
         for num in diceArray {
             dictionaryCounter[num, default: 0] += 1
         }
         
         if (dictionaryCounter.values.contains(4)) {
+            dictionaryCounter.removeAll()
             return "Poker"
         }
         
-        if (dictionaryCounter.values.contains(3) && dictionaryCounter.values.contains(2)) {
+        if  Set(diceArray).count == 2 {
             return "Full"
         }
         

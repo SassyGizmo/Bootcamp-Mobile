@@ -18,19 +18,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgT-kK-kGo">
-                                <rect key="frame" x="172" y="443.33333333333331" width="49" height="34.333333333333314"/>
+                                <rect key="frame" x="159" y="443.66666666666669" width="75" height="34"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="GO"/>
                                 <connections>
                                     <segue destination="WI3-2G-bX6" kind="show" id="KHO-bI-5y5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p39-jT-Kqp">
+                                <rect key="frame" x="159" y="507.66666666666674" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                                <connections>
+                                    <segue destination="csS-zq-x3g" kind="show" id="tu0-iN-0HR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="wgT-kK-kGo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Wce-KA-MjB"/>
+                            <constraint firstItem="p39-jT-Kqp" firstAttribute="top" secondItem="wgT-kK-kGo" secondAttribute="bottom" constant="30" id="HeW-DJ-nFG"/>
+                            <constraint firstItem="wgT-kK-kGo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="JCX-Qc-GpJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wgT-kK-kGo" secondAttribute="trailing" constant="159" id="WKB-zl-3Nt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p39-jT-Kqp" secondAttribute="trailing" constant="159" id="kfo-Oq-4Jr"/>
                             <constraint firstItem="wgT-kK-kGo" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="mSZ-75-T1M"/>
+                            <constraint firstItem="p39-jT-Kqp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="zPq-Zi-xYx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vLs-a0-Fae"/>
@@ -38,6 +50,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="683.20610687022895" y="3.5211267605633805"/>
+        </scene>
+        <!--Poker Cards View Controller-->
+        <scene sceneID="Xk1-ms-RaF">
+            <objects>
+                <viewController id="csS-zq-x3g" customClass="PokerCardsViewController" customModule="PokerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mGq-k7-WnJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzt-KU-0WU">
+                                <rect key="frame" x="159" y="409" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="generateCards:" destination="csS-zq-x3g" eventType="touchUpInside" id="cpS-nG-otN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cmb-R4-kIB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fzt-KU-0WU" firstAttribute="leading" secondItem="cmb-R4-kIB" secondAttribute="leading" constant="159" id="IaB-gR-bTe"/>
+                            <constraint firstItem="fzt-KU-0WU" firstAttribute="top" secondItem="cmb-R4-kIB" secondAttribute="top" constant="306" id="WbT-y4-mQW"/>
+                            <constraint firstItem="cmb-R4-kIB" firstAttribute="bottom" secondItem="fzt-KU-0WU" secondAttribute="bottom" constant="374" id="dyF-9Z-txa"/>
+                            <constraint firstItem="cmb-R4-kIB" firstAttribute="trailing" secondItem="fzt-KU-0WU" secondAttribute="trailing" constant="159" id="wwo-kI-fuM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TQ8-w0-EbM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RSN-ag-OCM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="683" y="751"/>
         </scene>
         <!--Poker View Controller-->
         <scene sceneID="g2j-Rc-cKN">
@@ -312,7 +356,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cbu-I8-eca" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1428.2442748091603" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1584" y="4"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="M8T-0g-Yiv">
