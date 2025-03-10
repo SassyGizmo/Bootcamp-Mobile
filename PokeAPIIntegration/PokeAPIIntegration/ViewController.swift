@@ -15,16 +15,23 @@ class ViewController: UIViewController {
     @IBOutlet weak var abilitiesLabel: UILabel!
     @IBOutlet weak var pokemonImageView: UIImageView!
     @IBOutlet weak var inputTextLabel: UITextField!
+    @IBOutlet weak var pickerLabel: UITextField!
     
     var userInput = ""
+    var data = ["Nombre", "ID"]
+    let pickerView = UIPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+      /*
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        pickerLabel.inputView = pickerView
+        inputTextLabel.isEnabled = false
+        */
 
     }
-    
+    /*
     func fetchPokemonData(pokemonName: String) {
             // URL de la PokeAPI
             let url = "https://pokeapi.co/api/v2/pokemon/\(pokemonName.lowercased())"
@@ -61,3 +68,32 @@ class ViewController: UIViewController {
     
 }
 
+extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    // MARK: Metodos
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return data.count
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return data[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if data[row] == "ID" {
+            inputTextLabel.keyboardType = .numberPad
+            inputTextLabel.isEnabled = true
+            inputTextLabel.becomeFirstResponder()
+
+        } else {
+            inputTextLabel.keyboardType = .default
+            inputTextLabel.isEnabled = true
+            inputTextLabel.becomeFirstResponder()
+        }
+        pickerLabel.text = data[row]
+    }*/
+}

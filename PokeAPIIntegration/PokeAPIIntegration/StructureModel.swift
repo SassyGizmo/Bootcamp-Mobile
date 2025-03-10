@@ -4,7 +4,7 @@
 //
 //  Created by Bootcamp on 2025-03-07.
 //
-
+/*
 import Foundation
 
 // Estructura para modelar la respuesta de la PokeAPI
@@ -26,3 +26,4 @@ struct Pokemon: Codable {
         let front_default: String
     }
 }
+*/
