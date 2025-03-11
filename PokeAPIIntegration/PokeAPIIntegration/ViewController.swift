@@ -23,15 +23,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      /*
+      
         pickerView.delegate = self
         pickerView.dataSource = self
         pickerLabel.inputView = pickerView
         inputTextLabel.isEnabled = false
-        */
+        
 
     }
-    /*
+    
     func fetchPokemonData(pokemonName: String) {
             // URL de la PokeAPI
             let url = "https://pokeapi.co/api/v2/pokemon/\(pokemonName.lowercased())"
@@ -95,5 +95,5 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
             inputTextLabel.becomeFirstResponder()
         }
         pickerLabel.text = data[row]
-    }*/
+    }
 }

@@ -50,7 +50,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="C4r-8A-csb"/>
                                 </constraints>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIJ-lU-QkT">
@@ -60,9 +60,6 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Button"/>
-                                <connections>
-                                    <segue destination="tIH-rM-MaE" kind="show" id="eHi-8c-j5v"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -105,46 +102,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="988.54961832061065" y="3.5211267605633805"/>
-        </scene>
-        <!--Search Poke View Controller-->
-        <scene sceneID="yKm-mb-C6G">
-            <objects>
-                <viewController id="tIH-rM-MaE" customClass="SearchPokeViewController" customModule="PokeAPIIntegration" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9q4-0p-gO8">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="BnL-Jn-O5l">
-                                <rect key="frame" x="39" y="143" width="315" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="tIH-rM-MaE" id="4L9-mX-XT5"/>
-                                </connections>
-                            </searchBar>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZi-h3-PZV">
-                                <rect key="frame" x="0.0" y="249" width="393" height="216"/>
-                            </pickerView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6dt-AK-Po7"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="BnL-Jn-O5l" firstAttribute="centerX" secondItem="6dt-AK-Po7" secondAttribute="centerX" id="6QN-3b-TMc"/>
-                            <constraint firstItem="hZi-h3-PZV" firstAttribute="top" secondItem="BnL-Jn-O5l" secondAttribute="bottom" constant="50" id="SKE-ku-0xl"/>
-                            <constraint firstItem="hZi-h3-PZV" firstAttribute="trailing" secondItem="6dt-AK-Po7" secondAttribute="trailing" id="cg0-v0-LHR"/>
-                            <constraint firstItem="hZi-h3-PZV" firstAttribute="leading" secondItem="6dt-AK-Po7" secondAttribute="leading" id="gV3-Qv-aCe"/>
-                            <constraint firstItem="BnL-Jn-O5l" firstAttribute="top" secondItem="6dt-AK-Po7" secondAttribute="top" constant="40" id="hRN-wS-Axp"/>
-                            <constraint firstItem="BnL-Jn-O5l" firstAttribute="width" secondItem="9q4-0p-gO8" secondAttribute="width" multiplier="0.8" id="ijr-b0-WVR"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="2fP-Nt-49h"/>
-                    <connections>
-                        <outlet property="pickerView" destination="hZi-h3-PZV" id="DkP-d3-c23"/>
-                        <outlet property="searchBar" destination="BnL-Jn-O5l" id="mXS-ie-c4m"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gjl-oC-0Dm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1844" y="4"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4IT-3x-LNt">
