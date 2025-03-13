@@ -14,6 +14,8 @@ struct Pokemon: Decodable, Identifiable {
     let defense: Int
     let name: String
     let imageUrl: String
+    let type: String
+    let description: String
 }
 
 struct PokemonImage {
