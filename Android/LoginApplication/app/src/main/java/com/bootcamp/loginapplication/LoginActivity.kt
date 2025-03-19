@@ -20,7 +20,7 @@ class LoginActivity : AppCompatActivity() {
         }
         supportActionBar?.hide()
         // Variables
-        val accounts = mapOf<String, String>("Junior" to "123", "User" to "123")
+        var accounts = mapOf<String, String>("Junior" to "123", "User" to "123")
         var userInput = ""
         var passwordInput = ""
 
@@ -37,12 +37,14 @@ class LoginActivity : AppCompatActivity() {
             if (accounts.containsKey(userInput) && accounts[userInput] == passwordInput) {
                 val intent = Intent(this, GameActivity::class.java)
                 startActivity(intent)
+                finish()
             }
         }
 
         btnRegister.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
     }
